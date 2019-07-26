@@ -22,7 +22,7 @@ io.on("connection", function(socket) {
   socket.on("chat message", function(msg) {
     mensajitoEncriptado = simple1.encrypt(msg);
     mensajitoDesencriptado = simple1.decrypt(mensajitoEncriptado);
-    io.emit("chat message", mensajitoDesencriptado + "        ------>            " + mensajitoEncriptado);
+    io.emit("chat message", mensajitoDesencriptado + "        ------------->            " + mensajitoEncriptado);
     // io.emit("chat message", mensajitoDesencriptado);
   });
 });
